@@ -51,8 +51,44 @@ Desloca todos os bits do AC uma posição para a esquerda. O bit mais à esquerd
  
 ### Shift lógico à direita
 Desloca todos os bits do AC uma posição para a direita. O bit mais à direita é descartado e um `0` é inserido à esquerda. Equivale a dividir o valor por 2.
- 
-## Ferramenta utilizada
+
+## CPU - Central Processing Unit
+
+### O que é uma CPU?
+A Unidade Central de Processamento é o componente fundamental de qualquer sistema computacional, e a sua função principal é processar dados através de um ciclo de decodificação e execução de instruções.
+
+Seus componentes principais trabalham de forma síncrona para realizar cálculos e movimentar informações entre os registradores:
+* **Unidade Lógica e Aritmética (ALU):** O núcleo onde os cálculos reais e operações lógicas acontecem.
+* **Registradores (AC e MQ):** Memórias que armazenam resultados temporários para acesso imediato da ALU.
+* **Unidade de Controle:** Responsável por interpretar o **Opcode** e definir qual caminho o dado deve seguir.
+
+### Refatoração da ALU: Ajustes e Complementos
+Durante o ciclo de desenvolvimento, a ALU passou por um processo de refatoração técnica. O projeto inicial apresentava conflitos de sinal que exigiram uma reestruturação profunda da arquitetura interna.
+
+1.  **Eliminação de Conflitos de Drivers:** Túneis globais de entrada foram substituídos por conexões físicas. Isso garantiu que a ALU receba sinais apenas através de seus pinos de interface, eliminando o erro de mais de uma saída ativa causado por colisões de nomes no escopo global da CPU.
+2.  **Estabilização do Subtrator:** O módulo de subtração foi ajustado para tratar corretamente o sinal de Borrow, evitando que o Carry Out da subtração entrasse em conflito com o Carry do somador.
+3.  **Unificação de Controle:** Os seletores dos Multiplexadores foram recalibrados para operar em sincronia com o barramento do Opcode.
+
+### Tabela de Operações (Opcodes)
+| Opcode | Operação |
+| :--- | :--- |
+| `000` | **SOMA** | 
+| `001` | **SUBTRAÇÃO** |
+| `010` | **MULTIPLICAÇÃO** | 
+| `011` | **DIVISÃO** | 
+| `100` | **SHIFT LEFT** | 
+| `101` | **SHIFT RIGHT** | 
+| `110` | **NAND** | 
+| `111` | **XOR** |
+
+### Como Operar a CPU
+1.  **Inicie a Simulação:** Clique no botão Play no simulador Digital.
+2.  **Defina os Dados:** Insira o valor desejado na entrada `N`.
+3.  **Escolha a Operação:** Ajuste o `Opcode` conforme a tabela acima.
+4.  **Habilite o Sistema:** Ligue a chave `ENABLE`.
+5.  **Execute o Ciclo:** Interaja com o componente de Clock para processar a instrução.
+
+### Ferramenta utilizada
  
 O projeto foi simulado utilizando o **Digital**, um simulador de circuitos lógicos open source.
  
