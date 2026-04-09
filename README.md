@@ -4,7 +4,7 @@ Este projeto consiste na implementação de uma **ALU (Arithmetic Logic Unit) de
  
 A ALU foi construída com circuitos digitais simulados, utilizando registradores e operadores combinacionais para executar as operações sobre os operandos de entrada.
  
-## Vídeo de apresentação
+## Vídeo de apresentação da ALU
  
 [![Apresentação da ALU 8 bits](https://img.youtube.com/vi/yHM74tY_DT0/0.jpg)](https://youtu.be/yHM74tY_DT0?si=h8oGRS5MU-F7qX_-)
  
