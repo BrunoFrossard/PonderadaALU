@@ -88,7 +88,10 @@ Durante o ciclo de desenvolvimento, a ALU passou por um processo de refatoraçã
 4.  **Habilite o Sistema:** Ligue a chave `ENABLE`.
 5.  **Execute o Ciclo:** Interaja com o componente de Clock para processar a instrução.
 
-### Ferramenta utilizada
+
+## Vídeo de apresentação da CPU
+ 
+[![Apresentação da CPU](https://img.youtube.com/vi/hy2x3is7CAc/0.jpg)](https://youtu.be/hy2x3is7CAc)
  
 O projeto foi simulado utilizando o **Digital**, um simulador de circuitos lógicos open source.
  
